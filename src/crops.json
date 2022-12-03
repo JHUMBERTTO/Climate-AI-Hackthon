@@ -1,0 +1,62 @@
+{
+    "almonds": {
+        "lowChillHours": 1,
+        "frost": 3,
+        "high Precipitation": 3,
+        "extreme Heat": 2,
+        "cold Stress": 1,
+        "Extreme Heat or Cold Stress": 0,
+        "High Humidity or Low Humidity": 0,
+        "High Humidity": 0,
+        "Low Humidity": 0,
+        "Low Precipitation": 0
+    },
+    "carrot": {
+        "Low Chill Hours": 0,
+        "Frost": 0,
+        "High Precipitation": 1,
+        "Extreme Heat": 10,
+        "Cold Stress": 5,
+        "Extreme Heat or Cold Stress": 2,
+        "High Humidity or Low Humidity": 2,
+        "High Humidity": 0,
+        "Low Humidity": 0,
+        "Low Precipitation": 0
+    },
+    "corn": {
+        "Low Chill Hours": 0 ,
+        "Frost": 1,
+        "High Precipitation": 0,
+        "Extreme Heat": 2,
+        "Cold Stress": 2,
+        "Extreme Heat or Cold Stress": 0,
+        "High Humidity or Low Humidity": 0,
+        "High Humidity": 2,
+        "Low Humidity": 1,
+        "Low Precipitation": 1
+    },
+    "pistachios": {
+        "Low Chill Hours": 1,
+        "Frost": 1,
+        "High Precipitation": 0,
+        "Extreme Heat": 3,
+        "Cold Stress": 1,
+        "Extreme Heat or Cold Stress": 0,
+        "High Humidity or Low Humidity": 0,
+        "High Humidity": 3,
+        "Low Humidity": 0,
+        "Low Precipitation": 0
+    },
+    "wheat": {
+        "Low Chill Hours": 0,
+        "Frost": 2,
+        "High Precipitation": 1,
+        "Extreme Heat": 4,
+        "Cold Stress": 2,
+        "Extreme Heat or Cold Stress": 0,
+        "High Humidity or Low Humidity": 0,
+        "High Humidity": 0,
+        "Low Humidity": 0,
+        "Low Precipitation": 2
+    }
+}
