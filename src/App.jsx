@@ -1,11 +1,13 @@
 
 import './App.css'
+import StartingPage from './assets/StartingPage'
 
 function App() {
   return (
-    <div className="App">
-    </div>
-  )
+    <>
+    <StartingPage/>
+    </>
+  );
 }
 
 export default App
