@@ -1,7 +1,8 @@
 import React from 'react';
 import { Card } from './Card';
+import Questions from './Questions';
 
-const StartingPage = () => {
+const QuestionsPage = () => {
   return (
     <Card>
         <h1 className='header'>Climate Resilence Quiz</h1>
@@ -10,4 +11,4 @@ const StartingPage = () => {
   )
 }
 
-export default StartingPage
+export default QuestionsPage

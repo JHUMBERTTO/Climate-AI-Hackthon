@@ -1,11 +1,11 @@
 
 import './App.css'
-import StartingPage from './assets/StartingPage'
+import QuestionsPage from './Components/QuestionsPage'
 
 function App() {
   return (
     <>
-    <StartingPage/>
+    <QuestionsPage/>
     </>
   );
 }

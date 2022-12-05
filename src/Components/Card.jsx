@@ -3,6 +3,6 @@ import './Card.css';
 
 export const Card = (props) => {
   return (
-    <div class="card">{props.children}</div>
+    <div class="card">{ props.children }</div>
   )
 }
