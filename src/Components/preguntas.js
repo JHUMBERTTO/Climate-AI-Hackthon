@@ -58,16 +58,17 @@ const preguntas = [
     {
         titulo:"What biomes do you have your crops?",
         opciones: [
+            {textoRespuesta: "Boreal Forest", value:1, status:false},
+            {textoRespuesta: "Desert", value:1, status:false},
+            {textoRespuesta: "Northwestern Coniferous Forest", value:1, status:false},
+            {textoRespuesta: "Temperate Grassland", value:1, status:false},
+            {textoRespuesta: "Temperate Forest", value:1, status:false},
+            {textoRespuesta: "Temperate Woodland and Shrubland", value:1, status:false},
+            {textoRespuesta: "Tropical Dry Forest", value:1, status:false},
+            {textoRespuesta: "Tropical Rain Forest", value:1, status:false},
+            {textoRespuesta: "Tropical Savanna", value:1, status:false},
             {textoRespuesta: "Tundra", value:1, status:false},
-            {textoRespuesta: "Bosque caducifolio y bosque mediterráneo", value:1, status:false},
-            {textoRespuesta: "Pradera", value:1, status:false},
-            {textoRespuesta: "Chaparral", value:1, status:false},
-            {textoRespuesta: "Desierto", value:1, status:false},
-            {textoRespuesta: "Taiga", value:1, status:false},
-            {textoRespuesta: "Estepa", value:1, status:false},
-            {textoRespuesta: "Selva tropical", value:1, status:false},
         ]
-
     },
 ]
 export default preguntas;

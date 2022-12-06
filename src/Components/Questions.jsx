@@ -58,23 +58,47 @@ function Questions() {
   for (let pregunta of preguntas) {
     for (let opcion of pregunta.opciones) {
       if (opcion.status === true) {
-        score = score + opcion.value
+        score += opcion.value
       }
     }
   }
-
-
+  
+// final showresult
   if (showScore) {
     return (
       <div className="questionCard">
         <h1 className="questions">Your score is: {score}</h1>
+        <>{scoreResult()}</>
+        <label>Name</label>
+        <input type="Name" placeholder="FullName" id="email"></input>
+        <label>Company</label>
+        <input type="Company" placeholder="CompanyName" id="CompanyName"></input>
+        <label>Email</label>
+        <input type="email" placeholder="youremail@gmail.com" id="email"></input>
       </div>
     );
   }
 
-  if (preguntaActual == 0) {
-    
+  function scoreResult(){
+    if(score <= 8){
+      return  <div>
+                <h1 className="questions">Low Climate Risk</h1>
+                <p>Based on your inputs, your company is facing a low level of climate risk today. However, the volatility of climate change demands that businesses start future-proofing now, so it’s a good idea to look into long-term solutions.</p>
+              </div>
+    }else if(score > 8 && score <= 16){
+      return  <div>
+                <h1 className="questions">Low Climate Risk</h1>
+                <p>Based on your inputs, your company is facing some climate risks and may be taking some initial steps to mitigate them, but we have identified additional actions that would not only protect your business from extreme weather, but possibly uncover new opportunities.</p>
+              </div>
+    }else{
+      return  <div>
+                <h1 className="questions">Low Climate Risk</h1>
+                <p>Based on your inputs, your company is facing several climate risks and is not currently taking sufficient mitigating steps to avoid business impact. We have identified additional actions that would not only protect your business from extreme weather, but possibly uncover new opportunities.</p>
+              </div>
+    }
   }
+
+
   return (
     <div className="questionCard">
       <h1 className="questions">{preguntas[preguntaActual].titulo}</h1>
