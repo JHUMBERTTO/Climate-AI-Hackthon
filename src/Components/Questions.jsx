@@ -2,8 +2,6 @@ import React from 'react'
 
 import './Card.css';
 import './Checkbox.css'
-
-import './Questions.css';
 import {useState, useEffect} from "react";
 import preguntas from "./preguntas";
 
@@ -36,7 +34,8 @@ function Questions (){
           type="checkbox" 
           value={checkBoxValue}
           onChange={(e)=>changeCheckBoxValue(e)}
-          /><label>{respuesta.textoRespuesta}</label></>
+          id={`check${index + 1}`}
+          /><label for={`check${index + 1}`}>{respuesta.textoRespuesta}</label></>
         ))}
       </div>
       <button
