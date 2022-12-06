@@ -96,12 +96,12 @@ function Questions() {
               </div>
     }else if(score > 8 && score <= 16){
       return  <div>
-                <h1 className="questions">Low Climate Risk</h1>
+                <h1 className="questions">Medium Climate Risk</h1>
                 <p>Based on your inputs, your company is facing some climate risks and may be taking some initial steps to mitigate them, but we have identified additional actions that would not only protect your business from extreme weather, but possibly uncover new opportunities.</p>
               </div>
     }else{
       return  <div>
-                <h1 className="questions">Low Climate Risk</h1>
+                <h1 className="questions">High Climate Risk</h1>
                 <p>Based on your inputs, your company is facing several climate risks and is not currently taking sufficient mitigating steps to avoid business impact. We have identified additional actions that would not only protect your business from extreme weather, but possibly uncover new opportunities.</p>
               </div>
     }
