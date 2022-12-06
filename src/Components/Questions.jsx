@@ -3,14 +3,14 @@ import React from 'react'
 import './Card.css';
 import './Checkbox.css'
 import {useState, useEffect} from "react";
-import preguntas from "./preguntas";
+import preguntas1 from "./preguntas";
 
 
 function Questions (){
   const [preguntaActual, setPreguntaActual] = useState(0);
   const [puntuacion, setPuntuacion] = useState(0);
   const [isFinish, setIsFinished] = useState(false);
-  const [checkBoxValue, setcheckboxValue] = useState(false)
+  const [preguntas, setPreguntas] = useState(preguntas1) 
 
   function showPrevQuestion(value, e){
       //regresar a pregunta anterior
@@ -21,21 +21,54 @@ function Questions (){
         setPreguntaActual(preguntaActual + 1)
       
   }
-  function changeCheckBoxValue(value, e){
+  function changeCheckBoxValue(e, indexOpcionActual){
     //cambiar el  valor true/false
-    setcheckboxValue(checkBoxValue)    
-}
+
+    // copias arreglos
+    // const nuevoArreglo = preguntas.map(p => {
+    //   return p
+    // })
+    console.log("ejecuta")
+    let _preguntas = preguntas.map((pregunta, i)=> {
+      if(preguntaActual === i){
+        //cambia valor
+        let _pregunta = { ...pregunta }
+        _pregunta.opciones = pregunta.opciones.map((opcion, o) =>{
+          if(indexOpcionActual === o){
+            let _opcion = { ...opcion, status:true}
+            return _opcion
+          }else{
+            return opcion
+          }
+        })
+
+        return _pregunta
+      }else{
+        return pregunta
+      }
+    })
+
+    setPreguntas(_preguntas)
+    // setPreguntas(preguntas)
+    // {preguntas[preguntaActual].opciones.map((status) =>(
+    //   setPreguntas(preguntaActual.opciones.status) !== false
+    // ))}
+  }
+
+  console.log("render")
+  console.log(preguntas)
+
   return (
     <div className='questionCard'>
       <h1 className='questions'>{preguntas[preguntaActual].titulo}</h1>
       <div className='answer'>
-        {preguntas[preguntaActual].opciones.map((respuesta, index) =>(
+        {preguntas[preguntaActual].opciones.map((opcion, index) =>(
           <><input 
           type="checkbox" 
-          value={checkBoxValue}
-          onChange={(e)=>changeCheckBoxValue(e)}
-          id={`check${index + 1}`}
-          /><label for={`check${index + 1}`}>{respuesta.textoRespuesta}</label></>
+          value={opcion.status}
+          onChange={(e)=>changeCheckBoxValue(e, index)}
+          id={`${preguntaActual}check${index + 1}`}
+          /><label for={`${preguntaActual}check${index + 1}`}>{opcion.textoRespuesta}</label></>
         ))}
       </div>
       <div className='buttonsDad'>
