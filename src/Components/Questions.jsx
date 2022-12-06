@@ -96,10 +96,10 @@ function Questions() {
         })}
       </div>
       <div className="buttonsDad">
-        <button className="btn" onClick={(e) => showPrevQuestion(e)}>
+        <button className="btnB" onClick={(e) => showPrevQuestion(e)}>
           Back
         </button>
-        <button className="btn" onClick={(e) => showNextQuestion(e)}>
+        <button className="btnC" onClick={(e) => showNextQuestion(e)}>
           Continue
         </button>
       </div>

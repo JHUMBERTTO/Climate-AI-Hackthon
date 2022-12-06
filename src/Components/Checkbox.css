@@ -18,15 +18,13 @@ input[type=checkbox] + label {
 
 label:before {
     content:  '';
-    background: transparent;
-    border: 1px solid #e76010;
+    border: 1px solid #F8C399;
     border-radius: 5px;
     display: inline-block;
     margin-right: 20px;
+    width: 17px;
+    height: 17px;
     text-align: center;
-    vertical-align: middle;
-    width: 15px;
-    height: 15px;
 }
 
 input[type=checkbox]:checked + label:before {
@@ -38,7 +36,11 @@ input[type=checkbox]:checked + label:before {
 
 .tittle {
     font-size: 45px;
+    width: 100%;
+}
 
+h1{
+    width: 100%;
 }
 
 .questions {

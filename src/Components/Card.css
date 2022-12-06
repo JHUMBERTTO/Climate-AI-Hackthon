@@ -6,18 +6,13 @@
 
 /*Card style*/
 .card {
-    height: 650px;
-    width: 550px;
     background-color: #e5e5e7;
     padding: 1rem;
     border-radius: 1rem;
     position: relative;
-    width: 727px;
-    height: 400px;
-    left: 356px;
-    top: 122px;
+    width: 750px;
+    height: 550px;
     margin-bottom: 2px;
-
 }
 
 /*Question cards style*/
@@ -29,10 +24,6 @@
     margin-top: 10;
     display: block;
     font-size: 1.17em;
-    margin-block-start: 1m;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     width: 100%;
     box-shadow: 2px 15px 85px -33px rgba(0, 0, 0, 0.37);
     -webkit-caja-sombra: 2px 15px 85px -33px rgba(0, 0, 0, 0.37);
@@ -46,29 +37,40 @@
 .answer {
     display: grid;
     padding-bottom: 1em;
-    row-gap: 5px;
+    row-gap: 6px;
 }
 
-.btn {
+.btnB {
     display: inline-block;
-    background: #fafafa;
-    color: #231f20;
-    border-radius: #E76010;
+    border-radius: 8px;
     padding: 10px 20px;
     margin: 5px;
-    border-radius: 5px;
     cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
-    font-family: inherit;
-   
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    border: 1px solid #F8C399;
+  }
+
+.btnC {
+    display: inline-block;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    background: #EE6900;
+    border: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fafafa;
     
   }
 
 
 .buttonsDad {
     display: flex;
-    justify-content: end;
-    align-items: center;
-
+    justify-content: space-between;
 }
