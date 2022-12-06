@@ -38,14 +38,16 @@ function Questions (){
           /><label for={`check${index + 1}`}>{respuesta.textoRespuesta}</label></>
         ))}
       </div>
-      <button
+      <div className='buttonsDad'>
+      <button className='btn'
         onClick={(e)=>showPrevQuestion(e)}>
-        Volver
+        Back
       </button>
-      <button
+      <button className='btn'
         onClick={(e)=>showNextQuestion(e)}>
-        Continuar
+        Continue
       </button>
+          </div>
     </div>
 
 
