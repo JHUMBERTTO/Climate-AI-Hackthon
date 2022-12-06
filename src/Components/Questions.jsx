@@ -69,12 +69,21 @@ function Questions() {
       <div className="questionCard">
         <h1 className="questions">Your score is: {score}</h1>
         <>{scoreResult()}</>
-        <label>Name</label>
-        <input type="Name" placeholder="FullName" id="email"></input>
-        <label>Company</label>
-        <input type="Company" placeholder="CompanyName" id="CompanyName"></input>
-        <label>Email</label>
-        <input type="email" placeholder="youremail@gmail.com" id="email"></input>
+        <div className="form-input">
+          <label>Name</label>
+          <input type="Name" placeholder="FullName" id="email"></input>
+        </div>
+        <div className="form-input">
+          <label>Company</label>
+          <input type="Company" placeholder="CompanyName" id="CompanyName"></input>
+        </div>
+        <div className="form-input">
+          <label>Email</label>
+          <input type="email" placeholder="youremail@gmail.com" id="email"></input>
+        </div>
+        <button className="btnC" onClick={(e) => alert("Thanks! someone will contact you soon.")}>
+          Continue
+        </button>
       </div>
     );
   }
@@ -112,7 +121,7 @@ function Questions() {
                 onChange={(e) => changeCheckBoxValue(e, index)}
                 id={`check_${preguntaActual}_${index + 1}`}
               />
-              <label for={`check_${preguntaActual}_${index + 1}`}>
+              <label className="checkbox-label" for={`check_${preguntaActual}_${index + 1}`}>
                 {opcion.textoRespuesta}
               </label>
             </>

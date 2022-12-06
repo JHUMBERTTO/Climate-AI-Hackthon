@@ -2,7 +2,7 @@ h1 {
 	margin-bottom: 18px;	
 }
 
-label {
+.checkbox-label {
 	font-size: 1em;
 	color: #231f20;
     margin-left: 5px;
@@ -12,11 +12,11 @@ input[type=checkbox] {
     display: none;
 }
 
-input[type=checkbox] + label {
+input[type=checkbox] + .checkbox-label {
     cursor: pointer;
 }
 
-label:before {
+.checkbox-label:before {
     content:  '';
     border: 1px solid #F8C399;
     border-radius: 5px;
@@ -27,7 +27,7 @@ label:before {
     text-align: center;
 }
 
-input[type=checkbox]:checked + label:before {
+input[type=checkbox]:checked + .checkbox-label:before {
 	content: '✓';
 	font-size: 17px;
 	color: #e76010;
@@ -46,4 +46,13 @@ h1{
 .questions {
     font-size: 25px;
     font-weight: lighter;
+}
+
+.form-input {
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.form-input label{
+    padding-right: 10px;
 }
