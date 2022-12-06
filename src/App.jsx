@@ -11,9 +11,14 @@ function App() {
 
   return (
     <Card>
-      <h1 className='header'>Climate Resilence Quiz</h1>
+      <h1 className='tittle' id='fuente personalizada'>Climate Resilence Quiz</h1>
       <Questions/>
+      
+      
+  
     </Card>
+
+
   );
 }
 

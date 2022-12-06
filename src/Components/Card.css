@@ -1,22 +1,49 @@
-.card{
+@font-face {
+    font-family: "fuente personalizada";
+    src: url('fonts/Outfit-SemiBold.woff') format('woff');
+}
+
+
+/*Card style*/
+.card {
     height: 650px;
     width: 550px;
-    background-color: whitesmoke;
-    padding: 2rem;
+    background-color: #e5e5e7;
+    padding: 1rem;
     border-radius: 1rem;
     position: relative;
-    border: 1px solid black;
+    width: 727px;
+    height: 400px;
+    left: 356px;
+    top: 122px;
+    margin-bottom: 2px;
+
 }
 
 /*Question cards style*/
 
-.QuestionCard{
-    position: absolute;
-    left: 28.19%;
-    right: 26.67%;
-    top: 16.29%;
-    bottom: 14.48%;
-
-    background: #FFFFFF;
+.questionCard {
+    position: relative;
+    background: #fafafa;
     border-radius: 10px;
+    margin-top: 10;
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1m;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    width: 100%;
+    box-shadow: 2px 15px 85px -33px rgba(0, 0, 0, 0.37);
+    -webkit-caja-sombra: 2px 15px 85px -33px rgba(0, 0, 0, 0.37);
+    -moz-caja-sombra: 2px 15px 85px -33px rgba(0, 0, 0, 0.37);
+    padding: 10px;
+
+
+    /*change absolute to relative*/
+}
+
+.answer {
+    padding-top: 10px;
+
 }
