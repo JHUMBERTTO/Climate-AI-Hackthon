@@ -1,27 +1,52 @@
 import React from 'react'
+
 import './Card.css';
 import './Checkbox.css'
 
-function Questions() {
+import './Questions.css';
+import {useState, useEffect} from "react";
+import preguntas from "./preguntas";
+
+
+function Questions (){
+  const [preguntaActual, setPreguntaActual] = useState(0);
+  const [puntuacion, setPuntuacion] = useState(0);
+  const [isFinish, setIsFinished] = useState(false);
+  const [checkBoxValue, setcheckboxValue] = useState(false)
+
+  function showPrevQuestion(value, e){
+      //regresar a pregunta anterior
+        setPreguntaActual(preguntaActual - 1)
+  }
+  function showNextQuestion(value, e){
+      //cambiar a  la siguiente pregunta
+        setPreguntaActual(preguntaActual + 1)
+      
+  }
+  function changeCheckBoxValue(value, e){
+    //cambiar el  valor true/false
+    setcheckboxValue(checkBoxValue)    
+}
   return (
     <div className='questionCard'>
-      <h1 className='questions' id='fuente personalizada'>¿Example question?</h1>
+      <h1 className='questions'>{preguntas[preguntaActual].titulo}</h1>
       <div className='answer'>
-        <input type="checkbox" value="false" id='check1'/>
-        <label for='check1'>Question</label>
+        {preguntas[preguntaActual].opciones.map((respuesta, index) =>(
+          <><input 
+          type="checkbox" 
+          value={checkBoxValue}
+          onChange={(e)=>changeCheckBoxValue(e)}
+          /><label>{respuesta.textoRespuesta}</label></>
+        ))}
       </div>
-      <div className='answer'>
-        <input type="checkbox"  value="false" id='check2'/>
-        <label for='check2'>Question</label>
-      </div>
-      <div className='answer'>
-        <input type="checkbox"  value="false" id='check3'/>
-        <label for='check3'>Question</label>
-      </div>
-      <div className='answer'>
-        <input type="checkbox"  value="false" id='check4'/>
-        <label for='check4'>Question</label>
-      </div>
+      <button
+        onClick={(e)=>showPrevQuestion(e)}>
+        Volver
+      </button>
+      <button
+        onClick={(e)=>showNextQuestion(e)}>
+        Continuar
+      </button>
     </div>
 
 
