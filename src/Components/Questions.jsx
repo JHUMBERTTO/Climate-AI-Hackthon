@@ -1,7 +1,12 @@
 import React from 'react'
+
+import './Card.css';
+import './Checkbox.css'
+
 import './Questions.css';
 import {useState, useEffect} from "react";
 import preguntas from "./preguntas";
+
 
 function Questions (){
   const [preguntaActual, setPreguntaActual] = useState(0);
@@ -26,7 +31,7 @@ function Questions (){
     <div className='questionCard'>
       <h1 className='questions'>{preguntas[preguntaActual].titulo}</h1>
       <div className='answer'>
-        {preguntas[preguntaActual].opciones.map((respuesta) =>(
+        {preguntas[preguntaActual].opciones.map((respuesta, index) =>(
           <><input 
           type="checkbox" 
           value={checkBoxValue}
@@ -43,6 +48,8 @@ function Questions (){
         Continuar
       </button>
     </div>
+
+
   )
 }
 
